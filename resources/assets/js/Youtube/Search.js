@@ -5,12 +5,12 @@ module.exports = function (options, callback) {
     if (!options.apiKey) {
         throw new Error('Youtube search would require a key');
     }
-
+    console.log(options);
     let params = {
         part: 'snippet',
         key: options.apiKey,
         q: options.term,
-        maxResults: (options.items) ? options.items : 50,
+        maxResults: (options.items) ? options.items : 5,
         type: 'video'
     };
 
